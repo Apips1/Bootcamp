@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+    <form action="latihan-3-list.html" method="get" >
+      <div>
+        <label for="name">User Name :</label>
+        <input type="text" name="name" id="name" />
+      </div>
+      <div>
+        <label for="email">Email :</label>
+        <input type="email" name="email" id="email"  value="@gmail.com"/>
+      </div>
+      <div>
+        <label for="country">Asal Negara :</label>
+        <select name="country" id="country">
+          <option value="Indonesia">Indonesia</option>
+          <option value="Malaysia">Malaysia</option>
+          <option value="Singapura">Singapura</option>
+          <option value="Thailand">Thailand</option>
+        </select>
+      </div>
+      <div>
+        <label for="gender">Jenis Kelamin :</label>
+        <div>
+          <input type="radio" name="gender" id="gender" value="Laki-laki" />
+          <label for="gender">Laki-laki</label>
+        </div>
+        <div>
+          <input type="radio" name="gender" id="gender" value="Perempuan" />
+          <label for="gender">Perempuan</label>
+        </div>
+      </div>
+      <div>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </div>
+    </form>
+  </body>
+</html>
