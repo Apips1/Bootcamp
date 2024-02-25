@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latihan 4</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        display: flex;
+        
+      }
+      .right {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+      .sidebar {
+        width: 200px;
+        height: 100vh;
+        background-color: aqua;
+        text-align: center;
+      }
+      .navbar {
+        width: 100%;
+        height: 10vh;
+        background-color: blue;
+      }
+      .navbar ul {
+        display: flex;
+        list-style: none;
+        justify-content: flex-end;
+        align-items: center;
+      }
+      .navbar li {
+        margin: 10px;
+        padding: 20px;
+      }
+      .content {
+        width: 100%;
+        height: 90vh;
+        margin: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="sidebar">Sidebar</div>
+      <div class="right">
+        <nav class="navbar">
+          <ul>
+            <li href="#">Home</li>
+            <li href="#">About</li>
+            <li href="#">Contact</li>
+          </ul>
+        </nav>
+        <div class="content">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt
+          nobis perferendis pariatur eius voluptatem qui voluptatibus vero
+          dolorem temporibus vitae, hic quibusdam. Ipsam, officia magni. Ea qui
+          exercitationem reprehenderit a.
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
