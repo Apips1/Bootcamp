@@ -12,14 +12,8 @@ body {
   margin: 0;
 }
 
-.wrapper {
-  width: 90%;
-  margin: 0 auto;
-}
-
 header {
   width: 100%;
-  height: 100px;
   color: black;
   position: sticky;
   background-color: #ffffff;
@@ -28,27 +22,35 @@ header {
   margin-bottom: 0;
 }
 .logo {
-  width: 40%;
+  width: 30%;
   float: left;
   text-align: left;
-  line-height: 100px;
 }
+
 .logo a {
   text-decoration: none;
-  font-size: 30px;
+  font-size: 40px;
   font-weight: 400;
   color: black;
   letter-spacing: 5px;
 }
-nav {
-  float: right;
-  line-height: 100px;
-}
 
+nav {
+  display: flex;
+  float: right;
+}
 nav a {
-  padding: 25px 10px;
+  padding: 25px 20px;
   margin: 0 1px;
   cursor: pointer;
+}
+
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 nav a:hover {
@@ -81,7 +83,7 @@ section.banner-area {
 
   top: 0;
   left: 0;
-  opacity: 0.5;
+  opacity: 0.8;
   z-index: -1;
 }
 
@@ -96,7 +98,7 @@ section.banner-area {
   align-items: center;
   text-align: center;
   font-size: 16px;
-  width: 15%;
+  width: 20%;
   color: white;
 }
 .button-area {
@@ -121,26 +123,31 @@ section.banner-area {
 }
 
 section.content-area {
-  padding: 90px;
+  padding: 50px 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   box-sizing: border-box;
-  height: auto;
   position: relative;
 }
 .games-section {
-  width: 80%;
-  margin: 0 auto;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .games-section > .game-headline {
   font-size: 24px;
-  float: left;
+  /* float: left; */
 }
 
 .games-section > .games-option select {
   padding: 10px 25px;
   font-size: 15px;
-  border-radius: 3px;
-  float: right;
+  border-radius: 8px;
+  /* float: right; */
   display: flex;
   text-decoration: none;
   border: none;
@@ -152,8 +159,8 @@ section.content-area {
   display: flex;
   max-width: 95%;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  margin: 40px auto;
+  justify-content: space-around;
+  /* margin: 40px auto; */
 }
 
 /* Tambahkan efek bayangan pada kartu */
@@ -204,8 +211,8 @@ section.content-area {
   transform: scale(1.1);
   transition: transform 0.3s ease;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  background-color: rgb(0, 183, 255);
-  color: #373b59;
+  background: linear-gradient(135deg, #4caf50, #2196f3);
+  color: #ffffff;
   cursor: pointer;
 }
 
@@ -242,4 +249,125 @@ section.content-area {
   margin-top: 5px;
   color: #000;
   font-weight: normal;
+}
+.game-card:hover .description .game-title,
+.game-card:hover .description .game-description,
+.game-card:hover .release {
+  color: white; /* Mengubah warna teks menjadi putih saat hover */
+}
+.hamburger-icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    width: 100%;
+    color: black;
+    position: sticky;
+    background-color: #ffffff;
+    top: 0;
+    z-index: 1;
+    margin-bottom: 0;
+  }
+  .logo {
+    width: 20%;
+    float: left;
+    text-align: left;
+  }
+
+  .logo a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 400;
+    color: black;
+    letter-spacing: 5px;
+  }
+
+  nav {
+    display: none; /* Sembunyikan navigasi pada layar kecil */
+  }
+  .hamburger-icon {
+    display: block; /* Tampilkan hamburger icon pada layar kecil */
+  }
+  nav.show {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 45px; /* Atur posisi navigasi */
+    right: 0;
+    background-color: #ffffff; /* Atur warna background */
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Tambahkan efek bayangan */
+    z-index: 999; /* Atur z-index agar navigasi tampil di atas elemen lain */
+  }
+
+  nav.show a {
+    margin-bottom: 10px; /* Atur jarak antara setiap item navigasi */
+  }
+
+  .wrapper {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  section.banner-area {
+    height: 50vh; /* Reduce height for smaller screens */
+  }
+
+  .banner-area h1 {
+    font-size: 20px;
+    margin-top: 30px;
+  }
+
+  .banner-area p {
+    font-size: 12px; /* Adjust font size for smaller screens */
+    width: 90%;
+  }
+  .button-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+  }
+  .button-area .button {
+    background-color: rgb(0, 183, 255);
+    border-radius: 8px;
+    border: none;
+    color: white;
+    padding: 20px 10px;
+    text-align: center;
+    font-size: 10px;
+    cursor: pointer;
+  }
+
+  .games-section {
+    gap: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .games-section > .game-headline {
+    font-size: 15px;
+  }
+
+  .games-section > .games-option select {
+    padding: 10px 15px;
+    font-size: 12px;
+    border-radius: 8px;
+    /* float: right; */
+    display: flex;
+
+    cursor: pointer;
+    text-transform: capitalize;
+  }
+
+  .release {
+    font-size: small;
+    gap: 80px;
+  }
 }
